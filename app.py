@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import io
 import base64
-import module1, module2, module3
+import module1, module2, module3, module4
 
 app = Flask(__name__)
 
@@ -29,6 +29,8 @@ def home():
             image = module2.flip_image(image, value)
         elif operation == 'zoom':
             image = module3.zoom_image(image, value)
+        elif operation == 'resize':
+            image = module4.resize_image(image, value)
 
         _, buffer = cv2.imencode('.jpg', original_image)
         original_image = base64.b64encode(buffer).decode('utf-8')
