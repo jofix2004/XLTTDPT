@@ -16,7 +16,7 @@ def home():
         image = cv2.imdecode(np.fromstring(image.read(), np.uint8), cv2.IMREAD_UNCHANGED)
         original_image = image.copy()  # Save the original image
         operation = request.form.get('operation')
-        value = int(request.form.get('value'))
+        value = float(request.form.get('value'))
 
         if operation == 'rotate':
             image = module1.rotate_image(image, value)
