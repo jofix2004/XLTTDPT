@@ -1,6 +1,4 @@
 from flask import Flask, request, render_template
-from flask_ngrok import run_with_ngrok
-from pyngrok import ngrok, conf
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -44,6 +42,4 @@ def home():
 
 
 if __name__ == '__main__':
-    public_url = ngrok.connect(5000).public_url
-    print(" * Running on ngrok ", public_url)
     app.run(debug=True)
