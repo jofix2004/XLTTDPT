@@ -8,9 +8,6 @@ import module1, module2, module3, module4
 
 app = Flask(__name__)
 
-# Thay thế YOUR_NGROK_AUTH_TOKEN bằng token của bạn
-ngrok.set_auth_token('2XdC6VQLIBTYiopzNhcMTuSP5P5_6rNGgGCwLbbDmMrwerWht')
-
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
